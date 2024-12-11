@@ -1,0 +1,80 @@
+/* Container สำหรับ Chat */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* พื้นที่แสดงข้อความ */
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  max-height: 300px;
+  overflow-y: auto; /* Scroll เมื่อข้อความยาวเกิน */
+}
+
+/* สไตล์พื้นฐานของข้อความ */
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+/* ข้อความฝั่งซ้าย */
+.message.left {
+  align-self: flex-start;
+  background-color: #8ee684;
+  text-align: left;
+}
+
+/* ข้อความฝั่งขวา */
+.message.right {
+  align-self: flex-end;
+  background-color: #d9c270;
+  text-align: right;
+}
+
+/* อินพุตข้อความ */
+input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #d37676;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* ปุ่ม */
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ปุ่มสลับฝั่ง */
+button:last-of-type {
+  background-color: #6c757d;
+}
+
+button:last-of-type:hover {
+  background-color: #495057;
+}
